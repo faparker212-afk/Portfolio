@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keshav | Creator</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>Keshav🔥</h2>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="profile.jpg" class="profile-img">
+
+  <h1>Keshav</h1>
+  <p>Reel Creator • Story Teller • YouTuber</p>
+
+  <button class="btn" onclick="youtube()">YouTube</button>
+  <button class="btn" onclick="insta()">Instagram</button>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p>
+    I create emotional reels, storytelling videos and engaging content 
+    that connects with audience. My goal is to express real feelings through videos 💔🔥
+  </p>
+</section>
+
+<!-- REELS -->
+<section class="section">
+  <h2>My Reels 🎬</h2>
+
+  <div class="reel-grid">
+
+    <div class="reel-card" onclick="openReel('reel1.mp4')">
+      <video src="reel1.mp4" muted></video>
+    </div>
+
+    <div class="reel-card" onclick="openReel('reel2.mp4')">
+      <video src="reel2.mp4" muted></video>
+    </div>
+
+    <div class="reel-card" onclick="openReel('reel3.mp4')">
+      <video src="reel3.mp4" muted></video>
+    </div>
+
+    <div class="reel-card" onclick="openReel('reel4.mp4')">
+      <video src="reel4.mp4" muted></video>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2>Contact</h2>
+  <p>📩 DM on Instagram for collaborations</p>
+</section>
+
+<!-- MODAL -->
+<div id="modal">
+  <span onclick="closeReel()">✖</span>
+  <video id="fullVideo" controls></video>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Keshav | All Rights Reserved</p>
+</footer>
+
+<script>
+function youtube(){
+  window.location.href = "https://www.youtube.com/@Keshavkiduniya1";
+}
+
+function insta(){
+  window.location.href = "https://instagram.com/yourusername";
+}
+
+function openReel(src){
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("fullVideo").src = src;
+}
+
+function closeReel(){
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("fullVideo").pause();
+}
+</script>
+
+</body>
+</html>

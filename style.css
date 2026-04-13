@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #fff;
+}
+
+/* NAV */
+nav {
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  background: rgba(20,20,20,0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profile-img {
+  width: 110px;
+  border-radius: 50%;
+  border: 2px solid red;
+  box-shadow: 0 0 20px red;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+/* BUTTON */
+.btn {
+  margin: 10px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg, red, #ff4d4d);
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTION */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* REELS */
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.reel-card {
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.reel-card video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .reel-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* MODAL */
+#modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: black;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal video {
+  width: 90%;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+}
